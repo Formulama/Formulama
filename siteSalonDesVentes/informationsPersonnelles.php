@@ -7,6 +7,7 @@ $dataToJSON = $_POST;
 $dataToJSON['date'] = date('d/m/Y H:i:s');
 print_r($dataToJSON);
 echo "</pre>";
-$fichier = fopen('bdd_'.date('Ymd').'.json', 'w+');
+$fichier = fopen('bdd_'.'.json', 'w+');
+// $fichier = fopen('bdd_'.date('Ymd').'.json', 'w+');//
 fwrite($fichier, $BDD);
 ?>
