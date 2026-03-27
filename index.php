@@ -23,7 +23,7 @@
 
 
 
-        <input id="nom" type="text" value="<?php echo $_POST['nom']?>" placeholder="Nom de votre acte de naissance" name="nom">
+        <input id="nom" type="text" value="<?php echo $_POST['nom']?>" placeholder="Nom (acte de naissance)" name="nom">
         <input id="nomUsage" type="text" value="" placeholder= "Nom de famille" name="nomUsage">
         <input id="prenom" type="text" value="" placeholder= "Prénom" name="prenom">
         <input id="dateNaissance" type="date" value="" placeholder= "Date de naissance" name="dateNaissance">

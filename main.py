@@ -9,7 +9,7 @@ DATE = str(datetime.now().strftime("%d-%m-%Y"))
 
 c = canvas.Canvas("cerfa_14011-02.pdf", pagesize=A4) #créer l'objet canvas avec son nom et sa taille
 
-with open('bdd_20260317.json', 'r') as f:
+with open('bdd.json', 'r') as f:
     data = json.load(f)
 
 page_width, page_height = A4 #mets les valeurs du format A4 dans les deux variables pour les utiliser plus tard
