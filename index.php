@@ -115,50 +115,30 @@
 
     <div class="champFormulaire">
         <label>Date de délivrance</label>
-        <input id="documentDate" type="date" placeholder= "" name="pertePasseport">
-    </div>
-
-    <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="cni" type="text" value="" placeholder= "" name="cni">
-    </div>
-
-    <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="cniDate" type="text" value="" placeholder= "" name="cniDate" >
-    </div>
-
-    <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="passeport" type="text" value="" placeholder= "" name="passeport">
-    </div>
-
-    <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="passeportDate" type="text" value="" placeholder= "" name="passeportDate">
+        <input id="documentDate" type="date" placeholder= "" name="documentDate">
     </div>
 
 
 <!-- CIRCONSTANCES DE LA PERTE -->
 
     <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="datePerte" type="text" value="" placeholder= "" name="datePerte">
+        <label>Date de perte</label>
+        <input id="datePerte" type="date" name="datePerte"
     </div>
 
     <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="lieuPerte" type="text" value="" placeholder= "" name="lieuPerte">
+        <label>Lieu de perte</label>
+        <input id="lieuPerte" type="text" placeholder="Gare de nantes" name="lieuPerte">
     </div>
 
     <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="circonstancesPerte" type="text" value="" placeholder= "" name="circonstancesPerte">
+        <label>Circonstances de la perte</label>
+        <input id="circonstancesPerte" type="text" value="" placeholder= "Mon sac est resté ouvert..." name="circonstancesPerte">
     </div>
 
     <div class="champFormulaire">
-        <label>nomUsage</label>
-        <input id="delivrePar" type="text" value="" placeholder= "" name="delivrePar">
+        <label>Délivré par</label>
+        <input id="delivrePar" type="text" value="" placeholder= "Préfecture de la Loire-Atlantique" name="delivrePar">
     </div>
 
         <input type="submit">
