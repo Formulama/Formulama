@@ -5,51 +5,161 @@
 </head>
 <body>
     <form action="informationsPersonnelles.php" method="post">
-<!-- 
-        <label for="nom"></label>
-        <input id="idnom" name="nom" required placeholder="nom sur votre acte de naissance">
-
-        <label for="prenom"></label>
-        <input id="idinput" name="prenom" required placeholder="Prénoms">
-
-        <label for="email"></label>
-        <input type="email" id="idemail" name="email" required placeholder="Email">
-
-        <label for="dateNaissance">Date de naissance:</label>
-        <input type="date" id="idDate" name="dateNaissance">
-
-        <input id="idNomUsage" name="dateNaissance"> -->
 
 
+<!-- déclarant -->
 
+    <div class="champFormulaire">
+        <label>Nom (acte de naissance)</label>
+        <input id="nom" type="text" value="<?php echo $_POST['nom']?>" placeholder="Dupont" name="nom">
+    </div>
 
-        <input id="nom" type="text" value="<?php echo $_POST['nom']?>" placeholder="Nom (acte de naissance)" name="nom">
-        <input id="nomUsage" type="text" value="" placeholder= "Nom de famille" name="nomUsage">
-        <input id="prenom" type="text" value="" placeholder= "Prénom" name="prenom">
+    <div class="champFormulaire">
+        <label>Nom de famille</label>
+        <input id="nomUsage" type="text" value="" placeholder= "Dupont" name="nomUsage">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Prénom</label>
+        <input id="prenom" type="text" value="" placeholder= "Jean" name="prenom">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Date de naissance</label>
         <input id="dateNaissance" type="date" value="" placeholder= "Date de naissance" name="dateNaissance">
-        <input id="communeNaissance" type="text" value="" placeholder= "Commune ou ville de naissance" name="communeNaissance">
-        <input id="codePostalNaissance" type="text" value="" placeholder= "Code postal de la ville de naissance" name="codePostalNaissance">
-        <input id="paysNaissance" type="text" value="" placeholder= "Pays de naissance" name="paysNaissance">
-        <input id="numeroAdresse" type="text" value="" placeholder= "Numéro de votre adresse" name="numeroAdresse">
-        <input id="typeVoieAdresse" type="text" value="" placeholder= "Type de voie" name="typeVoieAdresse">
-        <input id="nomVoieAdresse" type="text" value="" placeholder= "Nom de la voie" name="nomVoieAdresse">
-        <input id="codePostal" type="text" value="" placeholder= "Code postal" name="codePostal">
-        <input id="commune" type="text" value="" placeholder= "Votre ville ou commune" name="commune">
-        <input id="pays" type="text" value="" placeholder= "Votre Pays" name="pays">
-        <input id="majeur" type="text" value="" placeholder= "" name="majeur">
-        <input id="homme" type="text" value="" placeholder= "" name="homme" >
-        <input id="femme" type="text" value="" placeholder= "" name="femme">
-        <input id="perteIdentite" type="text" value="" placeholder= "" name="perteIdentite">
-        <input id="pertePasseport" type="text" value="" placeholder= "" name="pertePasseport">
-        <input id="cni" type="text" value="" placeholder= "" name="cni">
-        <input id="cniDate" type="text" value="" placeholder= "" name="cniDate" >
-        <input id="passeport" type="text" value="" placeholder= "" name="passeport">
-        <input id="passeportDate" type="text" value="" placeholder= "" name="passeportDate">
-        <input id="datePerte" type="text" value="" placeholder= "" name="datePerte">
-        <input id="lieuPerte" type="text" value="" placeholder= "" name="lieuPerte">
-        <input id="circonstancesPerte" type="text" value="" placeholder= "" name="circonstancesPerte">
-        <input id="delivrePar" type="text" value="" placeholder= "" name="delivrePar">
+    </div>
 
+<!-- RAJOUTER LE GENRE AVEC BALISE OPTION -->
+    <div class="champFormulaire">
+        <label>Civilité</label>
+        <select class="champFormulaire" id="homme" name="homme">
+            <option value="" disabled selected>Sélectionner</option>
+            <option>Homme</option>
+            <option>Femme</option>
+        </select>
+    </div>
+
+    <div class="champFormulaire">
+        <label>Commune ou ville de naissance</label>
+        <input id="communeNaissance" type="text" value="" placeholder= "Nantes" name="communeNaissance">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Code postal de la ville de naissance</label>
+        <input id="codePostalNaissance" type="text" value="" placeholder= "44200" name="codePostalNaissance">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Pays de naissance</label>
+        <input id="paysNaissance" type="text" value="" placeholder= "France" name="paysNaissance">
+    </div>
+
+
+<!-- DOMICILE -->
+
+    <div class="champFormulaire">
+        <label>Numéro de votre adresse</label>
+        <input id="numeroAdresse" type="text" value="" placeholder= "12" name="numeroAdresse">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Type de voie</label>
+        <select class="champFormulaire" id="typeVoieAdresse" name="typeVoieAdresse">
+            <option value="" disabled selected>Sélectionner</option>
+            <option>Rue</option>
+            <option>Avenue</option>
+            <option>Boulevard</option>
+            <option>Allée</option>
+            <option>Impasse</option>
+            <option>Place</option>
+            <option>Chemin</option>
+            <option>Route</option>
+        </select>
+    </div>
+
+    <div class="champFormulaire">
+        <label>Nom de la voie</label>
+        <input id="nomVoieAdresse" type="text" value="" placeholder= "Nom de la voie" name="nomVoieAdresse">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Code postal</label>
+        <input id="codePostal" type="text" value="" placeholder= "Code postal" name="codePostal">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Ville / Commune</label>
+        <input id="commune" type="text" value="" placeholder= "Votre ville ou commune" name="commune">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Pays</label>
+        <input id="pays" type="text" value="" placeholder= "Votre Pays" name="pays">
+    </div>
+
+<!-- CARACTERISTIQUE DU TITRE -->
+
+    <div class="champFormulaire">
+        <label>CNI / Passeport</label>
+        <select class="champFormulaire" id="perteIdentite" name="perteIdentite">
+            <option value="" disabled selected>Sélectionner</option>
+            <option>CNI</option>
+            <option>Passeport</option>
+        </select>
+    </div>
+
+    <div class="champFormulaire">
+        <label>N° document</label>
+        <input id="documentNumero" type="text" value="" placeholder= "T7X62TZ79" name="documentNumero">
+    </div>
+
+    <div class="champFormulaire">
+        <label>Date de délivrance</label>
+        <input id="documentDate" type="date" placeholder= "" name="pertePasseport">
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="cni" type="text" value="" placeholder= "" name="cni">
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="cniDate" type="text" value="" placeholder= "" name="cniDate" >
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="passeport" type="text" value="" placeholder= "" name="passeport">
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="passeportDate" type="text" value="" placeholder= "" name="passeportDate">
+    </div>
+
+
+<!-- CIRCONSTANCES DE LA PERTE -->
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="datePerte" type="text" value="" placeholder= "" name="datePerte">
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="lieuPerte" type="text" value="" placeholder= "" name="lieuPerte">
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="circonstancesPerte" type="text" value="" placeholder= "" name="circonstancesPerte">
+    </div>
+
+    <div class="champFormulaire">
+        <label>nomUsage</label>
+        <input id="delivrePar" type="text" value="" placeholder= "" name="delivrePar">
+    </div>
 
         <input type="submit">
         <input type="reset">

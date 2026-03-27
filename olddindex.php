@@ -192,7 +192,7 @@
             </div>
         </div>
 
-        <!-- ── Actions ── -->
+//boutons
         <div class="form-actions">
             <button type="reset"  class="btn btn-secondary">Réinitialiser</button>
             <button type="submit" class="btn btn-primary">Envoyer le formulaire</button>
